@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: all-tourism-assistant-api
+    env: python
+    rootDir: server
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: JWT_SECRET_KEY
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_DB_NAME
+        value: all_tourism_assistant
+      - key: GROK_API_KEY
+        sync: false
+      - key: GROK_MODEL
+        value: grok-3-mini
+      - key: GROK_BASE_URL
+        value: https://api.x.ai/v1
+      - key: CLIENT_ORIGIN
+        sync: false
