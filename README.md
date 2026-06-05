@@ -5,7 +5,7 @@ AI-powered tourism aggregator platform with a React/Tailwind frontend and Flask/
 ## Apps
 
 - `client/` - React, Tailwind CSS, React Router, Axios, Vercel-ready.
-- `server/` - Flask REST API, JWT auth, MongoDB Atlas, OpenAI integration, Render-ready.
+- `server/` - Flask REST API, JWT auth, MongoDB Atlas, Grok/xAI integration, Render-ready.
 
 ## Quick Start
 
@@ -57,14 +57,15 @@ Backend:
 
 - `MONGO_URI` - MongoDB Atlas connection string.
 - `JWT_SECRET_KEY` - production JWT signing secret.
-- `OPENAI_API_KEY` - enables live AI responses.
-- `GOOGLE_MAPS_API_KEY` - returned to the frontend for map embeds.
+- `GROK_API_KEY` - enables live Grok AI responses through xAI.
+- `GROK_MODEL` - Grok model name, for example `grok-3-mini`.
+- `GROK_BASE_URL` - xAI OpenAI-compatible API base URL.
 - `CLIENT_ORIGIN` - frontend origin, for example `https://all-tourism-assistant.vercel.app`.
 
 Frontend:
 
 - `VITE_API_BASE_URL` - Flask API URL.
-- `VITE_GOOGLE_MAPS_API_KEY` - browser Google Maps key for embed/navigation features.
+- `VITE_MAP_PROVIDER` - set to `openstreetmap` for OpenStreetMap embeds/navigation.
 
 ## Booking Flow
 
@@ -82,7 +83,7 @@ Use [DEPLOYMENT.md](DEPLOYMENT.md) for the public launch path:
 
 - Deploy `server/` to Render with `gunicorn app:app --bind 0.0.0.0:$PORT`.
 - Deploy `client/` to Vercel with `npm run build` and `dist` output.
-- Set MongoDB Atlas, OpenAI, Google Maps, JWT, CORS, and API URL environment variables in the hosting dashboards.
+- Set MongoDB Atlas, Grok/xAI, OpenStreetMap, JWT, CORS, and API URL environment variables in the hosting dashboards.
 
 The app is designed to become publicly accessible at your Vercel URL, backed by the Render API and MongoDB Atlas.
 

@@ -54,9 +54,9 @@ FLASK_ENV=production
 MONGO_URI=mongodb+srv://USER:PASSWORD@cluster.mongodb.net/all_tourism_assistant?retryWrites=true&w=majority
 MONGO_DB_NAME=all_tourism_assistant
 JWT_SECRET_KEY=use-a-long-random-production-secret-at-least-32-characters
-OPENAI_API_KEY=sk-...
-OPENAI_MODEL=gpt-4o-mini
-GOOGLE_MAPS_API_KEY=your-google-maps-server-or-browser-key
+GROK_API_KEY=xai-...
+GROK_MODEL=grok-3-mini
+GROK_BASE_URL=https://api.x.ai/v1
 CLIENT_ORIGIN=https://your-all-tourism-assistant.vercel.app
 ```
 
@@ -87,24 +87,20 @@ Vercel environment variables:
 
 ```env
 VITE_API_BASE_URL=https://your-all-tourism-assistant-api.onrender.com/api
-VITE_GOOGLE_MAPS_API_KEY=your-google-maps-browser-key
+VITE_MAP_PROVIDER=openstreetmap
 ```
 
 Deploy, then copy the Vercel production URL back into Render as `CLIENT_ORIGIN`.
 
-## 4. Google Maps
+## 4. OpenStreetMap
 
-Enable these Google Cloud APIs:
+All Tourism Assistant uses OpenStreetMap for map embeds and navigation links. No browser map API key is required.
 
-- Maps Embed API
-- Maps JavaScript API
-- Places API, if you later add live nearby search
+Map embeds geocode places through the public OpenStreetMap Nominatim endpoint and render an OpenStreetMap iframe.
 
-For production, restrict the browser key to your Vercel domain.
+## 5. Grok / xAI
 
-## 5. OpenAI
-
-Set `OPENAI_API_KEY` on Render. If the key is missing, All Tourism Assistant uses a local tourism fallback so the app remains usable, but live ChatGPT responses require the key.
+Set `GROK_API_KEY` on Render. If the key is missing, All Tourism Assistant uses a local tourism fallback so the app remains usable, but live Grok responses require the key.
 
 ## 6. Booking Flow
 
@@ -127,4 +123,3 @@ Frontend: https://your-all-tourism-assistant.vercel.app
 Backend:  https://your-all-tourism-assistant-api.onrender.com
 Health:   https://your-all-tourism-assistant-api.onrender.com/api/health
 ```
-

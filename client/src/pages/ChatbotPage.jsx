@@ -38,7 +38,7 @@ export default function ChatbotPage() {
       <div className="mt-7 grid min-h-[620px] overflow-hidden rounded-lg border border-teal-100 bg-white shadow-soft lg:grid-cols-[280px_1fr]">
         <aside className="border-b border-teal-100 bg-teal-50 p-5 lg:border-b-0 lg:border-r">
           <h2 className="font-bold">Assistant Context</h2>
-          <p className="mt-3 text-sm leading-6 text-slate-600">All Tourism Assistant responds as a 24/7 tourism concierge using platform data, OpenAI when configured, and safety-first travel guidance.</p>
+          <p className="mt-3 text-sm leading-6 text-slate-600">All Tourism Assistant responds as a 24/7 tourism concierge using platform data, Grok AI when configured, and safety-first travel guidance.</p>
         </aside>
         <div className="flex min-h-[620px] flex-col">
           <div className="flex-1 space-y-4 overflow-y-auto p-5">

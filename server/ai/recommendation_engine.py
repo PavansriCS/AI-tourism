@@ -31,7 +31,7 @@ def build_recommendations(destination="", budget=25000, days=4, interests=""):
         "routeSuggestions": [
             f"Start from central {selected['name']} and group nearby attractions by distance.",
             "Keep farther attractions for the middle day of the trip.",
-            "Use Google Maps navigation before each transfer."
+            "Use OpenStreetMap navigation before each transfer."
         ],
         "bookingOptions": {
             "hotels": [{"name": item["name"], "bookingUrl": item["bookingUrl"]} for item in hotels[:3]],

@@ -28,7 +28,7 @@ export default function Home() {
       <section className="page-shell -mt-8 grid gap-4 sm:-mt-12 md:grid-cols-3">
         {[
           ["AI trip planning", "Day-wise routes, time estimates, costs, and nearby attraction sequencing.", Sparkles],
-          ["Live navigation", "Google Maps embeds, direction links, and location-aware discovery flows.", MapPin],
+          ["Live navigation", "OpenStreetMap embeds, direction links, and location-aware discovery flows.", MapPin],
           ["Safety guidance", "Hospitals, police stations, weather alerts, emergency contacts, and safer area recommendations.", ShieldCheck]
         ].map(([title, text, Icon]) => (
           <div key={title} className="rounded-lg border border-teal-100 bg-white p-5 shadow-soft">

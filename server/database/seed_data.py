@@ -206,7 +206,7 @@ def destination_id(name):
 
 
 def maps_url(name):
-    return f"https://www.google.com/maps/search/?api=1&query={name.replace(' ', '+')}"
+    return f"https://www.openstreetmap.org/search?query={name.replace(' ', '+')}"
 
 
 def tourism_url(name):
@@ -426,7 +426,7 @@ SAFETY = {
     ],
     "nearbyHelp": [
         {"name": "Nearby hospitals", "address": "Use the map panel to locate hospitals near your current destination."},
-        {"name": "Nearby police stations", "address": "Use Google Maps navigation and call 112 in an emergency."}
+        {"name": "Nearby police stations", "address": "Use OpenStreetMap navigation and call 112 in an emergency."}
     ]
 }
 

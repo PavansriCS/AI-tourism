@@ -14,10 +14,11 @@ SYSTEM_PROMPT = (
 
 
 def tourism_chat_reply(message):
-    api_key = os.getenv("OPENAI_API_KEY")
-    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    api_key = os.getenv("GROK_API_KEY")
+    model = os.getenv("GROK_MODEL", "grok-3-mini")
+    base_url = os.getenv("GROK_BASE_URL", "https://api.x.ai/v1")
     if api_key and not api_key.startswith("replace-with"):
-        client = OpenAI(api_key=api_key)
+        client = OpenAI(api_key=api_key, base_url=base_url)
         response = client.chat.completions.create(
             model=model,
             messages=[
@@ -38,7 +39,7 @@ def tourism_chat_reply(message):
         f"Resort options: {', '.join(recs['resorts'][:2])}. "
         f"Attractions: {', '.join(recs['places'][:3])}. "
         f"Day 1 plan: {plan['schedule'][0]['theme']} with {plan['schedule'][0]['items'][0]['activity']}. "
-        "Use Google Maps for live navigation, keep 112 and 108 saved, avoid isolated late-night routes, "
+        "Use OpenStreetMap navigation for live routes, keep 112 and 108 saved, avoid isolated late-night routes, "
         "and complete bookings only on the official external provider website using the Book Now links."
     )
 

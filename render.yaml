@@ -14,9 +14,11 @@ services:
         sync: false
       - key: MONGO_DB_NAME
         value: all_tourism_assistant
-      - key: OPENAI_API_KEY
+      - key: GROK_API_KEY
         sync: false
-      - key: GOOGLE_MAPS_API_KEY
-        sync: false
+      - key: GROK_MODEL
+        value: grok-3-mini
+      - key: GROK_BASE_URL
+        value: https://api.x.ai/v1
       - key: CLIENT_ORIGIN
         sync: false

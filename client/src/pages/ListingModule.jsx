@@ -19,7 +19,7 @@ const config = {
   },
   restaurants: {
     title: "Restaurants",
-    subtitle: "Nearby restaurants, cuisine categories, ratings, distance, opening hours, and Google Maps navigation.",
+    subtitle: "Nearby restaurants, cuisine categories, ratings, distance, opening hours, and OpenStreetMap navigation.",
     endpoint: "/restaurants",
     keys: ["restaurants"],
     mapQuery: "Popular restaurants in Ooty Goa Chennai Yercaud Kodaikanal"
