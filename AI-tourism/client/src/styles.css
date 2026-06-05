@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #10201f;
+  background: #f5faf8;
+  -webkit-tap-highlight-color: rgba(15, 118, 110, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-reef focus:ring-offset-2;
+}
+
+.page-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply text-2xl font-bold leading-tight tracking-normal text-ink sm:text-3xl;
+}
+
+.muted {
+  @apply text-sm leading-6 text-slate-600;
+}
+
+.btn-primary {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-reef px-4 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-teal-800 focus-ring disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-teal-100 bg-white px-4 py-3 text-sm font-semibold text-reef transition hover:border-reef hover:bg-teal-50 focus-ring;
+}
+
+.input {
+  @apply min-h-11 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-ink shadow-sm focus-ring sm:text-sm;
+}
+
+.hero-bg {
+  background:
+    linear-gradient(90deg, rgba(7, 33, 32, 0.82), rgba(7, 33, 32, 0.38)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
