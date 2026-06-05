@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="All Tourism Assistant icon">
+  <rect width="512" height="512" rx="112" fill="#0f766e"/>
+  <path d="M104 316c44-74 93-111 147-111 44 0 78 20 103 60 12-13 28-20 46-20 36 0 65 29 65 65s-29 65-65 65H118c-17 0-24-27-14-59Z" fill="#f5faf8"/>
+  <path d="M161 161h190v58h-64v169h-62V219h-64v-58Z" fill="#f59e0b"/>
+  <circle cx="365" cy="154" r="34" fill="#fbf7ed"/>
+  <path d="M104 329c39-35 75-52 108-52 40 0 71 20 93 59 18-25 40-38 65-38 30 0 55 15 75 45" fill="none" stroke="#0ea5a4" stroke-width="22" stroke-linecap="round"/>
+</svg>
+
