@@ -46,6 +46,16 @@ def create_app():
     app.register_blueprint(trip_bp, url_prefix="/api/trips")
     app.register_blueprint(notification_bp, url_prefix="/api/notifications")
 
+    @app.get("/")
+    def index():
+        return jsonify({
+            "status": "ok",
+            "service": "All Tourism Assistant API",
+            "message": "Backend is running. Use the Vercel frontend for the website.",
+            "health": "/api/health",
+            "homeData": "/api/public/home"
+        })
+
     @app.get("/api/health")
     def health():
         return jsonify({"status": "ok", "service": "All Tourism Assistant API"})
